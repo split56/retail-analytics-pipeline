@@ -1,0 +1,35 @@
+version: 2
+
+models:
+  - name: fct_orders
+    description: "One row per order — primary analytics table"
+    columns:
+      - name: order_id
+        tests:
+          - unique
+          - not_null
+      - name: total_revenue
+        tests:
+          - not_null
+      - name: review_score
+        tests:
+          - accepted_values:
+              values: [1, 2, 3, 4, 5]
+              config:
+                severity: warn
+
+  - name: fct_order_items
+    columns:
+      - name: order_id
+        tests:
+          - not_null
+      - name: price
+        tests:
+          - not_null
+
+  - name: dim_customers
+    columns:
+      - name: customer_unique_id
+        tests:
+          - unique
+          - not_null

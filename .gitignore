@@ -205,3 +205,33 @@ cython_debug/
 marimo/_static/
 marimo/_lsp/
 __marimo__/
+
+# Environment
+.env
+venv/
+__pycache__/
+*.pyc
+
+# DuckDB
+*.db
+*.db.wal
+
+# dbt
+dbt_project/target/
+dbt_project/dbt_packages/
+dbt_project/logs/
+dbt_project/.user.yml
+
+# Airflow
+logs/
+airflow.cfg
+airflow.db
+webserver_config.py
+standalone_admin_password.txt
+
+# Data files (too large for GitHub)
+data/
+
+# OS files
+.DS_Store
+Thumbs.db

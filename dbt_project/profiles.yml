@@ -1,0 +1,7 @@
+retail_analytics:
+  target: dev
+  outputs:
+    dev:
+      type: duckdb
+      path: ../retail.db
+      threads: 4

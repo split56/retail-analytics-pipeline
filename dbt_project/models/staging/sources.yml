@@ -1,0 +1,23 @@
+version: 2
+
+sources:
+  - name: raw
+    schema: raw
+    description: "Raw Olist e-commerce data loaded from CSV files"
+    tables:
+      - name: orders
+        description: "All customer orders"
+      - name: customers
+        description: "Customer info"
+      - name: order_items
+        description: "Individual products within each order"
+      - name: order_payments
+        description: "Payment details, one order can have multiple payments"
+      - name: order_reviews
+        description: "Customer reviews per order"
+      - name: products
+        description: "Product catalog"
+      - name: sellers
+        description: "Seller information"
+      - name: product_category_translation
+        description: "Portuguese to English category name mapping"
